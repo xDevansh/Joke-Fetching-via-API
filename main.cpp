@@ -3,7 +3,7 @@
 #include<curl/curl.h> 
 
 //1.helper function
-size_t WriteCallBack(void* contents,size_t size,size_t nmemb,std::string* user_string)
+size_t WriteCallback(void* contents,size_t size,size_t nmemb,std::string* user_string)
 {
     user_string->append((char*)contents,size*nmemb);
     return size*nmemb;
