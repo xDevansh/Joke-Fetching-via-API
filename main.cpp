@@ -28,9 +28,12 @@ int main()
 
         //4.The request
         res=curl_easy_perform(curl);
+        //cleanup created handle
+        curl_easy_cleanup(curl);
 
         //5.outputting the recieved data
         std::cout << "--- Data received from the API ---\n";
         std::cout << api_data << "\n";
     }
+    return 0;
 }
